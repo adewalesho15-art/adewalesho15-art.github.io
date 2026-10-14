@@ -4,104 +4,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adewale Shorunke - AI Trainer | Prompt Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+:root{--bg:#070b18;--card:#10172d;--card2:#111c36;--border:#1c2a4a;--blue:#3b82f6;--blue2:#60a5fa;--text:#f8fafc;--muted:#8892a4}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
-.container{max-width:900px;margin:0 auto;padding:0 20px}
-.nav{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:16px 0;position:sticky;top:0;z-index:10}
-.nav-inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-.nav b{color:#0f172a;font-size:18px}
-.nav a{color:#475569;text-decoration:none;font-size:14px;font-weight:500;margin-left:16px}
-.hero{background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:48px 32px;margin:32px 0;text-align:left;display:flex;gap:32px;align-items:center;flex-wrap:wrap}
-.hero-text{flex:1;min-width:300px}
-.hero h1{font-size:36px;color:#0f172a;line-height:1.2;margin-bottom:8px;font-weight:700}
-.hero h1 span{color:#2563eb}
-.hero p.subtitle{font-size:18px;color:#2563eb;font-weight:600;margin-bottom:16px}
-.hero p.desc{color:#475569;font-size:15px;max-width:600px;margin-bottom:20px}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
-.badge{background:#f1f5f9;padding:6px 12px;border-radius:20px;font-size:12px;color:#334155;border:1px solid #e2e8f0;font-weight:500}
-.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.btn{padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px;transition:all .2s}
-.btn-primary{background:#2563eb;color:white}
-.btn-primary:hover{background:#1d4ed8}
-.btn-outline{background:#ffffff;color:#334155;border:1px solid #e2e8f0}
-.btn-outline:hover{background:#f8fafc}
-.card{background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:28px;margin:20px 0}
-.card h2{font-size:18px;margin-bottom:18px;color:#0f172a;font-weight:700;display:flex;align-items:center;gap:8px}
-.card h2::before{content:'';width:4px;height:18px;background:#2563eb;border-radius:2px;display:inline-block}
-.skill-tag{background:#f8fafc;border:1px solid #e2e8f0;padding:7px 12px;border-radius:6px;font-size:13px;display:inline-block;margin:4px;color:#334155;font-weight:500}
-.experience-item{border-left:2px solid #e2e8f0;padding-left:20px;margin-bottom:28px;position:relative}
-.experience-item::before{content:'';width:10px;height:10px;background:#2563eb;border-radius:50%;position:absolute;left:-6px;top:4px}
-.experience-item h3{color:#0f172a;font-size:16px;margin-bottom:4px;font-weight:600}
-.date{color:#64748b;font-size:13px;font-weight:500;margin-bottom:10px;display:block}
-ul{margin-left:18px} li{margin-bottom:6px;color:#334155;font-size:14px}
-.education-item{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.footer{text-align:center;padding:32px;color:#94a3b8;font-size:13px;border-top:1px solid #e2e8f0;margin-top:32px}
-@media(max-width:600px){.hero{padding:28px 20px}.hero h1{font-size:28px}}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.container{max-width:920px;margin:0 auto;padding:0 22px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,11,24,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:920px;margin:0 auto;padding:14px 22px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:16px;letter-spacing:-0.5px}
+.logo span{color:var(--blue2)}
+.nav-links a{color:var(--muted);font-size:13px;font-weight:600;margin-left:20px;letter-spacing:0.3px}
+.nav-links a:hover{color:var(--text)}
+.hero{margin:32px 0 22px;background:radial-gradient(120% 120% at 80% 0%, #1e3a8a 0%, #162044 30%, #0f172a 65%);border:1px solid var(--border);border-radius:24px;padding:54px 42px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px circle at 20% 80%, rgba(59,130,246,0.12), transparent 60%);pointer-events:none}
+.hero h1{font-size:44px;line-height:0.95;letter-spacing:-1.5px;font-weight:800;margin-bottom:14px;position:relative}
+.hero h1 .wave{font-weight:400}
+.sub{color:var(--blue2);font-weight:700;font-size:16px;margin-bottom:20px;position:relative}
+.desc-box{background:rgba(16,23,45,0.8);border:1px solid rgba(59,130,246,0.15);backdrop-filter:blur(8px);border-radius:14px;padding:18px 20px;max-width:680px;position:relative}
+.desc-box p{color:#c2ccdd;font-size:15px;line-height:1.75}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;position:relative}
+.meta span{background:#151f3a;border:1px solid #1e2d56;color:#a9b4c8;font-size:12px;font-weight:500;padding:7px 14px;border-radius:999px}
+.cta{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;position:relative}
+.btn{padding:13px 20px;border-radius:10px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:7px;border:1px solid transparent;transition:.2s}
+.btn-main{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(59,130,246,0.35)}
+.btn-main:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(59,130,246,0.4)}
+.btn-ghost{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);color:#e2e8f0}
+.btn-ghost:hover{background:rgba(255,255,255,0.1)}
+.section{margin:22px 0}
+.card{background:linear-gradient(180deg, var(--card2) 0%, var(--card) 100%);border:1px solid var(--border);border-radius:16px;padding:28px 28px}
+.card-title{font-size:15px;font-weight:700;letter-spacing:-0.3px;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.card-title i{width:28px;height:28px;background:#17234a;border:1px solid #23408a;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:14px}
+.grid-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:#162041;border:1px solid #223568;color:#b8c2d6;font-size:12.5px;font-weight:500;padding:8px 13px;border-radius:10px}
+.tag.hot{background:linear-gradient(180deg, rgba(59,130,246,0.18), rgba(59,130,246,0.08));border-color:rgba(59,130,246,0.35);color:#a9c8ff}
+.exp-list{display:flex;flex-direction:column;gap:24px}
+.exp{position:relative;padding-left:26px;border-left:1px solid var(--border)}
+.exp::before{content:'';position:absolute;left:-5px;top:2px;width:10px;height:10px;background:var(--blue);border-radius:50%;box-shadow:0 0 0 5px rgba(59,130,246,0.15)}
+.exp h3{font-size:15px;font-weight:600;color:#f1f5f9}
+.exp .when{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:0.4px;text-transform:uppercase;margin:4px 0 10px;display:block}
+.exp ul{margin-left:18px}
+.exp li{color:#8892a4;font-size:14px;margin-bottom:6px}
+.edu{color:#c2ccdd;font-size:14px;line-height:1.8}
+.footer{text-align:center;padding:36px 0;color:#4a5578;font-size:12px;border-top:1px solid var(--border);margin-top:32px}
+@media(max-width:640px){.hero{padding:36px 24px}.hero h1{font-size:32px}.desc-box p{font-size:14px}}
 </style>
 </head>
 <body>
 
 <div class="nav">
 <div class="nav-inner">
-<b>Adewale Shorunke</b>
-<div>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="cv.html">CV</a>
-</div>
+<div class="logo">Adewale <span>Shorunke.</span></div>
+<div class="nav-links"><a href="#about">ABOUT</a><a href="#work">WORK</a><a href="cv.html">CV</a></div>
 </div>
 </div>
 
 <div class="container">
 
 <div class="hero">
-<div class="hero-text">
-<h1>Adewale Shorunke <span>👋</span></h1>
-<p class="subtitle">AI Trainer (2 Years) | Prompt Engineer | Customer Support</p>
-<p class="desc">2 years experience working on different AI training platforms like Outlier, Handshake AI and Mercor with excellent feedback/results. Expert in Prompt Engineering & AI Response Evaluation.</p>
-<div class="badges">
-<span class="badge">📍 Lagos, Nigeria</span>
-<span class="badge">📧 adewalesho15@gmail.com</span>
-<span class="badge">📞 +2349035950063</span>
+<h1>Adewale Shorunke <span class="wave">👋</span></h1>
+<div class="sub">AI Trainer (2 Years) | Prompt Engineer | Customer Support</div>
+<div class="desc-box">
+<p>Results-driven AI Trainer with 2+ years of specialized experience training and evaluating large language models on leading platforms including Outlier, Handshake AI, and Mercor. Consistently recognized for excellent feedback and high-quality output, with deep expertise in advanced prompt engineering, data annotation, and AI response evaluation for quality, accuracy, and safety.</p>
 </div>
-<div class="btns">
-<a class="btn btn-primary" href="cv.html">📄 Download CV</a>
-<a class="btn btn-outline" href="mailto:adewalesho15@gmail.com">✉️ Contact Me</a>
-<a class="btn btn-outline" href="https://github.com/adewalesho15-art">GitHub Profile</a>
+<div class="meta">
+<span>📍 Lagos, Nigeria</span>
+<span>📧 adewalesho15@gmail.com</span>
+<span>📞 +2349035950063</span>
 </div>
-</div>
-</div>
-
-<div class="card" id="about">
-<h2>💼 About Me</h2>
-<p style="font-size:14px;color:#334155">I am an AI Trainer with 2 years of proven experience on Outlier, Handshake AI, and Mercor platforms. I specialize in prompt engineering, data annotation, and evaluating AI responses for quality, accuracy, and safety. With excellent ratings, I combine technical skills (CorelDRAW, Photoshop, Microsoft Office) with strong communication and customer support background from Chowdeck Logistics and Fashion Future Program.</p>
-</div>
-
-<div class="card">
-<h2>🛠️ My Skills</h2>
-<div style="margin-top:10px">
-<span class="skill-tag">✅ AI Training / Data Annotation - 2 Years</span>
-<span class="skill-tag">✅ Prompt Engineering - Advanced</span>
-<span class="skill-tag">✅ AI Response Evaluation</span>
-<span class="skill-tag">Outlier</span>
-<span class="skill-tag">Handshake AI</span>
-<span class="skill-tag">Mercor</span>
-<span class="skill-tag">Microsoft Office</span>
-<span class="skill-tag">CorelDRAW</span>
-<span class="skill-tag">Photoshop</span>
-<span class="skill-tag">Customer Support</span>
-<span class="skill-tag">Technical Support</span>
+<div class="cta">
+<a class="btn btn-main" href="cv.html">📄 Download CV</a>
+<a class="btn btn-ghost" href="mailto:adewalesho15@gmail.com">✉️ Contact Me</a>
+<a class="btn btn-ghost" href="https://github.com/adewalesho15-art">GitHub</a>
 </div>
 </div>
 
-<div class="card" id="experience">
-<h2>💼 Experience</h2>
+<div class="section card" id="about">
+<div class="card-title"><i>🧠</i> About Me</div>
+<p style="color:#8892a4;font-size:14px;line-height:1.8">I am an AI Trainer with 2 years of proven experience on Outlier, Handshake AI, and Mercor platforms. I specialize in prompt engineering, data annotation, and evaluating AI responses for quality, accuracy, and safety. With excellent ratings, I combine technical skills (CorelDRAW, Photoshop, Microsoft Office) with strong communication and customer support background from Chowdeck Logistics and Fashion Future Program.</p>
+</div>
 
-<div class="experience-item">
+<div class="section card">
+<div class="card-title"><i>🛠️</i> My Skills</div>
+<div class="grid-tags">
+<span class="tag hot">✅ AI Training / Data Annotation - 2 Years</span>
+<span class="tag hot">✅ Prompt Engineering - Advanced</span>
+<span class="tag hot">✅ AI Response Evaluation</span>
+<span class="tag">Outlier</span>
+<span class="tag">Handshake AI</span>
+<span class="tag">Mercor</span>
+<span class="tag">Microsoft Office</span>
+<span class="tag">CorelDRAW</span>
+<span class="tag">Photoshop</span>
+<span class="tag">Customer Support</span>
+<span class="tag">Technical Support</span>
+</div>
+</div>
+
+<div class="section card" id="work">
+<div class="card-title"><i>💼</i> Experience</div>
+<div class="exp-list">
+
+<div class="exp">
 <h3>AI Trainer / Data Annotator | Outlier, Handshake AI, Mercor</h3>
-<span class="date">2023 - Present | 2 Years | Excellent Ratings | Remote</span>
+<span class="when">2023 - Present | 2 Years | Excellent Ratings | Remote</span>
 <ul>
 <li>2 years experience working on different AI training platforms like Outlier, Handshake AI and Mercor with excellent feedback/results</li>
 <li>Performed prompt engineering, data annotation, and training data creation</li>
@@ -109,46 +116,41 @@ ul{margin-left:18px} li{margin-bottom:6px;color:#334155;font-size:14px}
 </ul>
 </div>
 
-<div class="experience-item">
+<div class="exp">
 <h3>Call Agent | Fashion Future Program (FFP), Aba</h3>
-<span class="date">2025 - 2026</span>
+<span class="when">2025 - 2026</span>
 <ul>
 <li>Helping customers solve technical or service-related problems</li>
 <li>Answering general questions about products and company policies</li>
 </ul>
 </div>
 
-<div class="experience-item">
+<div class="exp">
 <h3>Customer Support Representative | Chowdeck Logistics</h3>
-<span class="date">Lagos</span>
+<span class="when">Lagos</span>
 <ul>
 <li>Tracking shipments, resolving customer inquiries on delivery status</li>
 <li>Coordinating with dispatch and warehouse teams</li>
 </ul>
 </div>
 
-<div class="experience-item">
+<div class="exp">
 <h3>NYSC Teacher | Ifeanyichukwu International School, Aba</h3>
-<span class="date">2024 - 2025</span>
+<span class="when">2024 - 2025</span>
 <ul>
 <li>Taught Civic Education and guided students in Microsoft Office (Word, Excel, PowerPoint)</li>
 </ul>
 </div>
 
 </div>
-
-<div class="card">
-<h2>🎓 Education</h2>
-<div class="education-item">
-<p style="font-size:14px"><b>B.Sc Political Science Education</b> - 2023<br>
-<b>SSCE</b> - Ceclam College, Lagos - 2017</p>
-</div>
 </div>
 
-<div class="footer">
-<p>Portfolio: adewalesho15-art.github.io | CV: adewalesho15-art.github.io/cv.html</p>
-<p style="margin-top:8px">© 2026 Adewale Shorunke. Built with professionalism.</p>
+<div class="section card">
+<div class="card-title"><i>🎓</i> Education</div>
+<p class="edu"><b style="color:#e2e8f0">B.Sc Political Science Education</b> — 2023<br><b style="color:#e2e8f0">SSCE</b> — Ceclam College, Lagos — 2017</p>
 </div>
+
+<div class="footer">© 2026 Adewale Shorunke • adewalesho15-art.github.io • Built Dark Premium</div>
 
 </div>
 </body>
