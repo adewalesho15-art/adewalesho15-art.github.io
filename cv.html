@@ -4,37 +4,118 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV - Adewale Shorunke</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:system-ui;background:#0f172a;color:#e2e8f0;padding:20px}
-a{color:#38bdf8;text-decoration:none}
-.top{max-width:850px;margin:0 auto 20px}
-.top a{border:1px solid #334155;padding:8px 16px;border-radius:20px;color:#94a3b8}
-.card{max-width:850px;margin:0 auto;background:#1e293b;border:1px solid #334155;border-radius:16px;padding:28px}
-h1{color:#fff;font-size:2rem;margin:0}
-.sub{color:#38bdf8;font-weight:700;margin:8px 0 16px}
-.meta{color:#94a3b8;line-height:1.7;margin-bottom:20px}
-h2{border-bottom:1px solid #334155;padding-bottom:6px;margin-top:28px}
-.item{margin-bottom:18px}
-.tag{display:inline-block;background:#0f172a;border:1px solid #334155;color:#38bdf8;padding:4px 10px;border-radius:12px;font-size:.8rem;margin:3px}
-.btn{display:inline-block;background:#38bdf8;color:#0f172a;padding:12px 20px;border-radius:8px;font-weight:700;margin-top:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+.container{max-width:850px;margin:0 auto;padding:20px}
+.top-nav{max-width:850px;margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+.top-nav a{color:#475569;text-decoration:none;font-size:14px;font-weight:500;border:1px solid #e2e8f0;padding:8px 16px;border-radius:8px;background:white}
+.btn-download{background:#2563eb;color:white;border:none;padding:10px 20px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer}
+.btn-download:hover{background:#1d4ed8}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px;margin:0 auto}
+.header{border-bottom:2px solid #f1f5f9;padding-bottom:20px;margin-bottom:24px}
+.header h1{font-size:32px;color:#0f172a;margin-bottom:4px}
+.header .role{color:#2563eb;font-weight:600;font-size:16px;margin-bottom:12px}
+.contact{color:#64748b;font-size:13px;line-height:1.8}
+h2{font-size:16px;color:#0f172a;font-weight:700;margin:24px 0 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #f1f5f9;padding-bottom:8px}
+h2::before{content:'';width:4px;height:16px;background:#2563eb;border-radius:2px;display:inline-block}
+.item{margin-bottom:20px}
+.item h3{font-size:15px;color:#0f172a;font-weight:600;margin-bottom:2px}
+.date{color:#64748b;font-size:12px;font-weight:500;margin-bottom:6px}
+ul{margin-left:18px} li{margin-bottom:4px;font-size:14px;color:#334155}
+.tag{background:#f8fafc;border:1px solid #e2e8f0;padding:5px 10px;border-radius:6px;font-size:12px;display:inline-block;margin:3px;color:#334155}
+@media print{.top-nav{display:none} body{background:white} .card{border:none}}
 </style>
 </head>
 <body>
-<div class="top"><a href="index.html">← Back</a></div>
-<div class="card">
-<h1>Adewale Shorunke</h1>
-<div class="sub">Project Manager | Strategic Leader | Digital Operations</div>
-<div class="meta">📍 Lagos, Nigeria | ✉️ adewalesho15@gmail.com | Portfolio | LinkedIn</div>
-<h2>Professional Summary</h2>
-<p>Results-driven Project Manager with 5+ years leading cross-functional teams and delivering operational excellence.</p>
-<h2>Core Skills</h2>
-<div><span class="tag">Project Management</span><span class="tag">Agile</span><span class="tag">Leadership</span><span class="tag">Strategic Planning</span><span class="tag">Stakeholder Mgmt</span><span class="tag">Digital Ops</span></div>
-<h2>Experience</h2>
-<div class="item"><h3>Project Manager - 2021 to Present</h3><p>Leading projects, managing timelines, improving efficiency by 30%.</p></div>
-<div class="item"><h3>Operations Lead - 2019 to 2021</h3><p>Drove operational strategy and business growth.</p></div>
-<h2>Education</h2>
-<div class="item"><h3>Bachelor's Degree</h3><p>Update with your University name</p></div>
-<a href="index.html" class="btn">Back to Portfolio</a>
+
+<div class="top-nav">
+<a href="index.html">← Back to Portfolio</a>
+<button class="btn-download" onclick="window.print()">📄 Download / Print CV</button>
 </div>
+
+<div class="container">
+<div class="card">
+
+<div class="header">
+<h1>Adewale Shorunke</h1>
+<div class="role">AI Trainer (2 Years) | Prompt Engineer | Customer Support</div>
+<div class="contact">
+📍 Lagos, Nigeria | 📧 adewalesho15@gmail.com | 📞 +2349035950063<br>
+🌐 Portfolio: adewalesho15-art.github.io | GitHub: github.com/adewalesho15-art
+</div>
+</div>
+
+<h2>🧠 Professional Summary</h2>
+<p style="font-size:14px;color:#334155">AI Trainer with 2 years of proven experience on Outlier, Handshake AI, and Mercor platforms with excellent feedback/results. Expert in Prompt Engineering & AI Response Evaluation. Combines technical skills (CorelDRAW, Photoshop, Microsoft Office) with strong communication and customer support background.</p>
+
+<h2>🛠️ Skills</h2>
+<div>
+<span class="tag">✅ AI Training / Data Annotation - 2 Years</span>
+<span class="tag">✅ Prompt Engineering - Advanced</span>
+<span class="tag">✅ AI Response Evaluation</span>
+<span class="tag">Outlier</span>
+<span class="tag">Handshake AI</span>
+<span class="tag">Mercor</span>
+<span class="tag">Microsoft Office</span>
+<span class="tag">CorelDRAW</span>
+<span class="tag">Photoshop</span>
+<span class="tag">Customer Support</span>
+<span class="tag">Technical Support</span>
+</div>
+
+<h2>💼 Experience</h2>
+
+<div class="item">
+<h3>AI Trainer / Data Annotator | Outlier, Handshake AI, Mercor</h3>
+<div class="date">2023 - Present | 2 Years | Excellent Ratings | Remote</div>
+<ul>
+<li>2 years experience working on different AI training platforms like Outlier, Handshake AI and Mercor with excellent feedback/results</li>
+<li>Performed prompt engineering, data annotation, and training data creation</li>
+<li>Evaluated AI responses for quality, accuracy, and safety</li>
+</ul>
+</div>
+
+<div class="item">
+<h3>Call Agent | Fashion Future Program (FFP), Aba</h3>
+<div class="date">2025 - 2026</div>
+<ul>
+<li>Helping customers solve technical or service-related problems</li>
+<li>Answering general questions about products and company policies</li>
+</ul>
+</div>
+
+<div class="item">
+<h3>Customer Support Representative | Chowdeck Logistics</h3>
+<div class="date">Lagos</div>
+<ul>
+<li>Tracking shipments, resolving customer inquiries on delivery status</li>
+<li>Coordinating with dispatch and warehouse teams</li>
+</ul>
+</div>
+
+<div class="item">
+<h3>NYSC Teacher | Ifeanyichukwu International School, Aba</h3>
+<div class="date">2024 - 2025</div>
+<ul>
+<li>Taught Civic Education and guided students in Microsoft Office (Word, Excel, PowerPoint)</li>
+</ul>
+</div>
+
+<h2>🎓 Education</h2>
+<div class="item">
+<h3>B.Sc Political Science Education - 2023</h3>
+<h3>SSCE - Ceclam College, Lagos - 2017</h3>
+</div>
+
+<div style="text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid #f1f5f9">
+<button class="btn-download" onclick="window.print()" style="padding:12px 24px">📄 Download as PDF</button>
+<p style="color:#94a3b8;font-size:12px;margin-top:10px">Click to save as PDF on your phone or laptop</p>
+</div>
+
+</div>
+</div>
+
 </body>
 </html>
